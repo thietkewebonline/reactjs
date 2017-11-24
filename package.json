@@ -4,10 +4,8 @@
   "description": "thietkewebonline",
   "main": "index.js",
   "scripts": {
-    "start": "node --version",
+    "start": "webpack-dev-server --hot",
     "test": "echo \"Error: no test specified\" && exit 1"
-
-
   },
   "author": "hieund",
   "license": "ISC",
