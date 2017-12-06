@@ -68,7 +68,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 <div id="container">
-	hello 2 kk gfjgkfgjfk kakakak
+	<?php
+	  print_r($list);
+	?>
 </div>
 
 </body>
