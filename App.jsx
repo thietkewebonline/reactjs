@@ -12,20 +12,30 @@ class App extends React.Component {
         }
     }
 
-    componentDidMount = () => {
+    componentDidMount() {
+        console.log("did mount");
         this.fetchApi();
     }
-    fetchApi = () => {
-        axios.get('/ci/welcome/api')
-            .then(function (response) {
+
+    fetchApi() {
+        console.log("fetch api");
+        axios.get('http://localhost/test2/test_react/ci/index.php/welcome/api')
+            .then((response) => {
                 console.log(response);
-                this.setState({
-                    data: response.data
-                });
+                this.onDataChange(response.data ? response.data.data : "");
             })
             .catch(function (error) {
                 console.log(error);
             });
+    }
+
+    onDataChange(data) {
+        console.log("on data change");
+        if (data) {
+            this.setState({
+                data,
+            });
+        }
     }
 
     render() {

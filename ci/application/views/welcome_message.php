@@ -68,14 +68,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 <div id="container">
-	<?php
-	  print_r($list);
-	?>
 </div>
-<!--Include bundle js-->
-<script type="text/javascript" src="../index.js"></script>
+
+
 <!--ReactJs will render as below-->
 <div id="app"></div>
+<!--Include bundle js-->
+<script type="text/javascript" src="../index.js"></script>
 
 </body>
 </html>
